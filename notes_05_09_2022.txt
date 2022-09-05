@@ -1,0 +1,316 @@
+Code 1
+
+public class Hi {
+    public static void main(String[] args){
+         System.out.println("Hello");
+  }
+}
+The above code will compile and show the output
+---------------------------------------------------------------------------------
+
+public class Hi {
+ 
+  
+}
+
+What will happen if we write a class without a main method?
+QDo you think the code will compile?
+A Yes the code will compile because syntactically the code is correct.
+Q Do you think the code will execute?
+A No because we dont have the entrypoint main method to execute the code.
+
+---------------------------------------------------------------------------
+
+class Demo {
+  Public static void main(String args[]){
+    System.out.println("Hi");
+ }
+}
+What about the above code ? Will it compile and run?
+A The code will show compilation error as we have used uppercase P for writing public.
+______________________________________________________________________________________________
+
+class demo {
+   public static void main(String args[]) {
+        System.out.println("Hi");
+    }
+}
+What about the above code? Will it compile and run?
+A The code will compile and run. Though we should write demo's d in uppercase as per the convention. 
+----------------------------------------------------------------------------------------------- 
+class Demo {
+   public static void main(string args[]) {
+        System.out.println("Hi");
+    }
+}
+
+What about the above code? Will it compile and run?
+The code will show compilation error as we are writing s in smallcase for the String class. The String class
+is already a predefined class available as part of Java class library.
+-----------------------------------------------------------------------------------
+class Demo {
+   public static void main(String args[]) {
+        System.out.println("Hi");
+   
+}
+
+What about the above code? Will it compile and run?
+We missed a closing brace.
+
+----------------------------------------------------------------------
+
+class Demo {
+   public static void main(String args[]) {
+    int j;    
+    System.out.println(j);
+   }
+}
+What about the above code? Will it compile and run?
+A The variable j is uninitialised.
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+class Demo {
+   public static void main(String args[]) {
+    int j;    
+   
+   }
+}
+
+What about the above code? Will it compile and run?
+A As the variable j is not accessed anywhere within the code.
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+int a=10;
+int b=5;
+int c=1;
+
+int result=a+b-c;  
+
+Whether the b-c will be executed first or a+b?
+
+So here we discuss about associativity. So here the associativity is from left to right. So a+b will be performed
+first followed by subtracting the value of c from the added value of a+b.
+
+
+
+
+int num1,num2,num2;
+
+num1=num2=num3=20; // Here the associativity is from right to left. 
+That means num3 gets a value of 20 and that 20 is assigned to num2 through num3 and num1 gets the value 20 through num2.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+double num1=12.5;
+int num2=10;
+
+double result=num1+num2;
+   The above expression's datatype gets converted into double type and the result is further stored in a double data type variable. 
+   So the result is stored without any compilation error
+
+
+double num1=12.5;
+int num2=10;
+
+int result=num1+num2;
+   The above expression's datatype gets converted into double type but we are trying to store the output of the expression in a int variable
+   So the above code will show compilation error.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+public class TypeConversionDemo1 {
+
+	public static void main(String[] args) {
+	double num1=12.5;
+	int num2=10;
+	double result=num1+num2;
+	System.out.println(result); //22.5
+	//int result2=num1+num2;  //Type mismatch: cannot convert from double to int
+    // Because the size of int datatype is of 4 bytes and that of double is of 8 bytes. So 8 bytes cannot be accomodated
+	// into 4 bytes of memory
+	}
+
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+public class TypeConversionDemo2 {
+
+	public static void main(String[] args) {
+		int num=10;
+		double num2=num;  // Type conversion or implicit data conversion as the size of int is smaller than double
+     System.out.println(num2); //10.0
+	}
+
+}
+-------------------------------------------------------------------------------------------------------------
+
+public class TypeConversionDemo3 {
+
+	public static void main(String[] args) {
+	char ch='A';
+	int num=ch;
+	long num2=ch;
+	double num3=ch;
+	System.out.println(ch);  //A
+	System.out.println(num); // 65====> ASCII value for uppercase A
+	System.out.println(num2);
+    System.out.println(num3);
+	}
+
+}
+-------------------------------------------------
+
+public class TypeCastingDemo1 {
+
+	public static void main(String[] args) {
+		double result=12.5;
+	//	int result2=result; // compilation error
+	int result2=(int)result; // typecast as int
+	System.out.println(result2);
+
+	}
+
+}
+
+---------------------------------------------------------------------------------------------------------
+import java.util.Scanner;
+public class UserInputDemo {
+
+  public static void main(String[] args){
+   Scanner sc=new Scanner(System.in);     
+   System.out.println("Enter a number");
+   int num=sc.nextInt();  // This executable line with scanner.nextInt() is helping to accept user input and store it in the 
+      // variable num;
+   System.out.println("Enter a name");
+   String name=sc.nextLine();
+   System.out.prinltn(num);
+   System.out.println(name); 
+  }
+}
+  
+--------------------------------------------------------------------------------------------
+import java.util.Scanner;
+
+public class UserInputDemo2 {
+// Ctrl+Shift+o
+	public static void main(String[] args) {
+	int studentRoll;  // int primitive
+	String studentName;  // non primitive/reference type
+	float studentAverageScore; // float primitive
+	Scanner scan=new Scanner(System.in); // non primitive/reference type
+	System.out.println("Enter the student's roll number");
+	studentRoll=scan.nextInt();
+	System.out.println("Enter the student's name");
+	studentName=scan.next();
+	System.out.println("Enter the student's average score");
+	studentAverageScore=scan.nextFloat();
+	System.out.println("The details of the student:");
+	System.out.println("ROLL "+studentRoll);
+	System.out.println("NAME "+studentName);
+	System.out.println("AVERAGE SCORE "+studentAverageScore);
+	
+
+	}
+
+}
+-------------------------------------------------------------------------------------
+char,byte,short,int,String
+
+String monthName="january";
+
+switch(monthName){
+
+case "january" : System.out.println("Starting month");
+                  break;
+case "february" : System.out.println("Second month");
+                  break;
+}
+
+
+------------------------------------------------------------------------------------------------------------
+
+char grade='B';
+
+switch(grade){
+case 'A' : System.out.println("Result is Best");
+           break;
+case 'B' : System.out.println("Result is Good");
+           break;
+ 
+default 
+
+}
+
+char grade='B';
+
+switch(grade){
+case 'A','B' : System.out.println("Result is Best");
+           break;
+case 'C' : System.out.println("Result is Good");
+           break;
+ 
+default 
+
+}
+
+
+
+----------------------------------------------------------------------------------------------------------------------------
+With if we can use a range of values but with switch we can use a range of values to compare
+
+
+if(marks>=80 && marks<=100){
+
+}
+
+
+switch(ch) {
+
+
+
+}
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+We need to continue accepting number from user and displaying those numbers till the user replies as yes.
+
+----------------------------------------------------------------------------------------------------------------------
+
+
+Enter 10 numbers from user and perform the addition of those 10 numbers. If the user enters 0 then exit from the loop.
+
+import java.util.Scanner;
+public class BreakDemo {
+
+     public static void main(String[] args) {
+      Scanner scan=new Scanner(System.in);
+      int noOfIterations=10;
+      int ctr=1;
+      int num;
+      int sum=0;
+      while(ctr<=noOfIterations){
+       System.out.println("Enter the number");
+       num=scan.nextInt();
+       sum=sum+num;      
+       if(num==0){
+           break;
+       }
+      ctr++;
+    }
+    System.out.println("The sum of entered numbers "+sum);
+  }
+}
+
+
+
+
+
+
+
+
+
+

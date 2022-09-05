@@ -1,0 +1,205 @@
+class Welcome{} 
+
+
+
+We have certain keywords and keywords are
+written in smallcase.
+
+* class
+* public
+* static
+* void 
+
+
+We have classes like:
+
+Welcome ( User defined class)
+String  ( Predefined class)
+System  ( Predefined class) 
+
+Whenever we write a class, the class name should start with uppercase.
+The predefined classes, we cannot write starting it with lowercase which means I 
+cannot write string,system but userdefined class I can start with smaillcase, though 
+it is not suggested. Which means I can write Welcome or welcome( not prefered ).
+
+
+public static void main(String args[]){
+
+}
+// The above code is a main method where we write some executable line/lines.
+
+System.out.println("Hello Friends");
+
+System is a class , out is an object and println is a method and Hello Friends is 
+a string value to be displayed.
+
+
+class Welcome {
+	public static void main(String[] args) {
+		System.out.println("Hello World! Welcome to Java Programming!");
+	}
+}
+/* String is a class and args is an array of String */
+
+class Welcome {
+	public static void main(String[] args) {
+		system.out.println("Hello World! Welcome to Java Programming!");
+	}
+}
+
+
+
+
+/* Compilation failed
+file.java:3: error: package system does not exist
+system.out.println("Hello World! Welcome to Java Programming!");
+^
+1 error */
+
+--------------------------------------------------------------------------------------
+
+class Welcome {
+	public static void main(String[] strs){
+		System.out.print("Hello World! Welcome to Java Programming!");
+		System.out.println("Welcome to infosys");
+	}
+}
+
+
+Hello World! Welcome to Java Programming!Welcome to infosys.
+
+In the above code the lines are displayed on the same line as with the first System.out.print It will print the information cursor remains in the
+same line and the second line information is shown along with the display of the first line.
+
+-------------------------------------------------------------------
+
+class Welcome {
+	public static void main(String[] strs){
+		System.out.print("Hello World! Welcome to Java Programming!");
+		System.out.println("Welcome to infosys");
+	}
+}
+
+In the above code while displaying the first line, we are using the println method and that is the reason , cursor is
+taken to the next line and the second line content is shown in a different line.
+---------------------------------
+class Welcome {
+	public static void main(String[] strs){
+		System.out.print("Hello World! Welcome to Java Programming!");
+		System.out.println("Welcome to infosys");
+	}
+}
+
+
+javac Welcome.java ( We are using the javac compiler to compile the code and we provide the file name, So Welcome.java is the file name.)
+[ If we dont have any syntactical error the code will compile and we will get a file called Welcome.class ( This file contains bytecode(bytecode is
+an intermediate language between high level language and low level/machine language )
+
+Now if we are doing manually we write
+java Welcome ( java is an interpreter which will interpret the bytecode and convert it into the machine level language amd the code will execute)
+
+
+------------------------------------------------------------------------------------
+To check which java version is present in my system or java is installed or not, What is the command?
+A java -version
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+JDK installations
+
+https://www.oracle.com/java/technologies/downloads/#jdk17-windows
+	
+https://download.oracle.com/java/17/latest/jdk-17_windows-x64_bin.msi
+
+So first creating an account with Oracle and then we can install.
+
+C:\Program Files\Java\jdk-17.0.2 ( After installation with installer it created a folder under Program Files)
+
+We have to set the path for the installation:
+
+Setting the path , 
+My PC=====> right click====> advanced system settings=====> enviroment variables====>system variables=====>New====>
+Variable_name=====JAVA_HOME
+variable_value=====>C:\Program Files\Java\jdk-17.0.2 
+
+clicking on OK.
+
+Select Path system variable and edit and new
+%JAVA_HOME%\bin
+
+and close the dialog boxes by selecting OK button.
+
+
+
+
+
+Eclipse installtation
+
+https://www.eclipse.org/downloads/
+
+After downloading and extracting we get a folder with the name eclipse at the place where you have extracted.
+click on the eclipse ide application icon to start working in eclipse.
+
+After the installation is complete we click on the eclipse application icon or create a desktop shortcut and started using the Eclipse IDE( Integrated Development Environment through which we can write code, see the compilation error, test the code and execute the code.)
+
+=-------------------------------------------
+Create a java project.
+
+Give a name to the project.
+
+Deselect the module checkbox.
+
+It created a project with the name day1.
+
+Right click on the project name, New, Class... assign a class name.
+
+
+delete the package name. 
+
+Select the main method with the selection of the checkbox.
+
+Click on Finish.
+
+
+Complete the code by writing
+
+syso and pressing ctrl+spacebar.
+
+It will complete as System.out.println("Hello");
+
+
+To execute the code.
+
+Right click on the editor===> Run as =====> Java Application
+
+
+-----------------------------
+
+Primitive type
+int num=10;
+
+
+
+
+-------
+10
+-----
+num
+
+
+String name="Ashok";
+
+
+
+-----
+54321
+-----
+name
+
+54321 54322  54323  54324   54325
+A     s      h      o       k
+
+----------------------------------
+
+boolean cannot be converted to other datatype and vice e versa.
+
